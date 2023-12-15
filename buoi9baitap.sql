@@ -10,6 +10,9 @@ CASE
   end as triangle
 from Triangle
 --bai 3
+SELECT
+Round(100*((Count(case_id) where call_category is NULL or call_category = 'n/a'))/count (case_id)),1)
+FROM callers;
 --bai 4
 SELECT name FROM Customer
 Where referee_id <>2 OR referee_id is NULL
